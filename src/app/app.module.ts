@@ -2,15 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {HttpClientModule } from '@angular/common/http';
+import { FreeApiService } from './free-api.service';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent       
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FreeApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
